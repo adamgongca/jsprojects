@@ -1,0 +1,17 @@
+<div id="search-component">
+    <h4>Person Search</h4>
+    <span for="search-firstname"> First Name</span>
+    <input #searchBox1 id="search-firstname" />
+    <p></p>
+    <span for="search-lastname"> Last Name</span>
+    <input #searchBox2 id="search-lastname" />
+    <p></p>
+    <button (click)="search(searchBox1.value,searchBox2.value)">Search</button>&nbsp;
+    <a routerLink="/listall">Back to List</a>
+
+    <ul class="search-result">
+    <li *ngFor="let person of persons$ | async" >
+        {{person.firstName}} {{person.lastName}}
+    </li>
+  </ul>
+</div>

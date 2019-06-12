@@ -1,0 +1,9 @@
+<div>
+  <h3>Person List</h3> 
+  <a routerLink="/search">Search</a>
+  <ul>
+    <li *ngFor="let person of persons | async">
+        {{person.firstName}}  {{person.lastName}}
+    </li>
+  </ul>
+</div>
